@@ -1,6 +1,6 @@
-# Lab Instructions: Creating an HTML Document
+# Lab Instructions: Styling a page
 
-In this exercise you will you will practice creating a simple HTML document.<br><br>
+In this exercise you will you will practice applying CSS rules to HTML elements.<br><br>
 
 > ### **Tips: Before you Begin**
 > #### **To view your code and instructions side-by-side**, select the following in your VSCode toolbar:
@@ -13,31 +13,31 @@ In this exercise you will you will practice creating a simple HTML document.<br>
  
 <br>
 
-## Task 1: Create a valid HTML document that displays a piece of text.
+## Task 1: Style an HTML page using CSS..
 
 Objectives
-- Add the **DOCTYPE**.
-- Add the HTML, head and body elements.
-- Add the title element.
-- Add the text to the body element.
+- Define a CSS rule using an element selector.
+- Define a CSS rule using an id selector.
+- Define a CSS rule using a class selector.
+- Define a CSS rule using a descendant selector.
 
 Follow the Step by Step instructions below:
 
-1. Open the `index.html` file.
+1. Open the `styles.css` file.
 
-2. Type `<!DOCTYPE html>` on the first line.
+2. Add a CSS rule for the `body` element that sets the background color to `#E0E0E2`.
 
-3. Create your `html` element on the next line. This will be the root element of the document.
+3. Add a CSS rule for the `h1` element that sets the text color to: `#721817`.
 
-4. Add the `head` element inside the `html` element. The head element contains data about the HTML document that does not display in the web browser.  
+4. Add a CSS rule for the `h2` element that sets the text color to: `#721817`.  
 
-5. Add the `title` element inside the `head` element.
+5. Add a CSS rule for the `center-text` CSS class that aligns the text to `center`.
 
-6. Add the text `My First HTML Document` inside the `title` element. The content of the `title` element is the text that will be displayed in the web browser tab.   
+6. Add a CSS rule for the HTML element with the id `logo`. Set its left and right margins to `auto` and changes its display to a `block` element.  
 
-7. Close the `head` tag and add the `body` element. The ``body element contains all displayable content of the webpage.
+7. Add a CSS rule for all `span` elements that are children of `h2` elements that sets the text color to `#FA9F42` and its font size to `0.75em`.
 
-8. Add the text `I successfully created my first document` inside the `body` element. This displays on the webpage. 
+8. Add a CSS rule for the HTML element with the id `copyright`. Set its top padding to `12` pixels and its font size to `0.75em`. 
 
 
 <br>
@@ -55,6 +55,5 @@ You can also see your score in your Programming Assignment "My Submission" tab.
 
 ### Tips
 
-* Ensure that the **DOCTYPE** is declared at the beginning of the file.
-* Remember that HTML documents have a specific structure.
-* Review the lessons *What is HTML?* and *HTML Documents.*
+* If you get stuck, apply the CSS rules one at a time and verify their behaviour is what you expect.
+* Review the lessons *Selecting and Styling*, *Text and color in CSS*, *Different types of selectors*, and *Box Model Introducction*.
