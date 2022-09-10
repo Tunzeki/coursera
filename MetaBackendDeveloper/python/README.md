@@ -1,7 +1,8 @@
-# Lab Instructions: Abstract Classes and Methods
+# Lab Instructions: Import and Scope
 
-In this assignment, you will be creating an abstract class for a bank that will be used to create a regular class for a specific bank.  
-This class will contain the implementation of the abstract method from the abstract class.  
+So far, you've learned the different ways in which you can use import statements to import other Python files, modules and packages.   
+You have also seen the different ways in which you can import specific functions using different formats of import.   
+In this assignment you'll learn and practice how to use import to bring external code within the direct scope of the project.
 
  <br>
 
@@ -12,7 +13,7 @@ This class will contain the implementation of the abstract method from the abstr
 > - Select your code file in the code tree, which will open it up in a new VSCode tab.
 > - Drag your assessment code files over to the second column. 
 > - Great work! You can now see instructions and code at the same time. 
-> - Questions about using VSCode? Please see our support resources [here](https://www.coursera.org/learn/programming-in-python/supplement/2IEyt/visual-studio-code-on-coursera)
+> - Questions about using VSCode? Please see our support resources [here](https://www.coursera.org/learn/programming-in-python/supplement/2IEyt/visual-studio-code-on-coursera).
 > #### **To run your Python code**
 > - Select your Python file in the Visual Studio Code file tree 
 > - You can right click the file and select "Run Python File in Terminal" 
@@ -22,40 +23,56 @@ This class will contain the implementation of the abstract method from the abstr
     (Select "Run Python File in Terminal" in the provided button dropdown)
 > - Alternatively, you can follow lab instructions which use python3 commands to run your code in terminal.
 > 
+
 <br>
 
-## Exercise Instructions
+## Exercise Objectives:
+- Use the import statement to import a built-in package in Python.
+- Use the import statement to call a function present in another Python file. 
+<br><br>
 
-### Instructions
+## Instructions
 
-1. Create a class called `Bank` and pass `ABC` to it.  
+1.  Open the file jsongenerator.py present inside project folder.
 
-2. Inside the class you have to define two methods: 
-    - 2.1: Define a function called `basicinfo()` and add a print statement inside it saying   
-    `"This is a generic bank"` and returning the string `"Generic bank: 0"`. 
+2. Import a built-in package called `json` 
+   
+3. Import the following from a file called employee.py:
+   - A function called `details` 
+   - Variables called `employee_name`, `age` and `title`
+<br><br>
 
-    - 2.2: Define a second function called `withdraw` and keep it empty by adding a pass keyword under it.   
-    Make this function abstract by adding `'@abstractmethod'` right above it. <br><br>
+4. Implement the `create_dict()` function that returns a dictionary given employee information.   
+Create and return a dictionary with three key-value pairs where:
+    - Keys are string variables: `"first_name"` `“age”` and `“title”`  
+     and their respective values are `employee_name`, `age` and `title` variables that we have imported from the employee module. 
+    - Be sure to cast the values to the expected types.
+<br><br>
 
-3. Create another class called `Swiss` and pass the class `Bank` inside it. 
-    This means you are inheriting from `class Bank`. 
-    -  3.1: Create a constructor for this class that initializes a class variable `bal` to `1000` <br><br>
+5. Use a function called `dumps()` from the json module using dot notation and pass the `employee_dict` dictionary that we have created to it.   
+Return its value to a variable named `json_object`. 
 
-4. Override both functions from the Bank class: `basicinfo()` and `withdraw()`. 
-    - 4.1: Define a function called `basicinfo()` and add a print statement inside it stating `“This is the Swiss Bank”`  
-    and returning a string with `"Swiss Bank: "` followed by the current bank balance.   
-    For example, if `self.bal = 80`, then it would return `"Swiss Bank: 80"`
+    The format of the same should look like:
+    ```
+    variable = json.dumps(dict) 
+    ```
 
-    - 4.2 Define a second function,  called `withdraw` and pass one parameter to it (other than `self):` amount.  
-     Amount represents the amount that will be withdrawn. 
+6. Complete the `write_json_to_file()` function
+    - Use a built-in function called `open()` and pass the `output_file` argument and `“w”` to it.   
+    Return the value of this function to a variable named newfile.
+    -   Call a function called `write()` over this variable newfile. Pass the `json_object` variable you created in Step 5 inside it.
+    - Close this file by calling a built-in function `close()` directly on newfile. You don’t need to pass any arguments here. 
+<br><br>
 
-        - 4.2.1: Update the class variable bal by deducting the value of amount from it. 
-        - 4.2.2: Print the value of amount giving output such as: “Withdrawn amount: 30"
-        - 4.2.3:  Print the new balance giving an output such as: “New balance: 970”
-        - 4.2.4:  Return the new balance
-        - Note: Make sure to verify that there is enough money to withdraw!  
-        If amount is greater than balance, then do not deduct any money from the 
-        class variable `bal`. Instead, print a statement saying `"Insufficient funds"`, and return the original account balance instead.
+
+7. Save the files
+
+8. Open the terminal to execute the files
+
+9. Run the code using the command (within project directory)
+   ```
+    python3 jsongenerator.py 
+    ```
 
 <br>
 
