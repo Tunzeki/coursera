@@ -1,39 +1,38 @@
 Instructions
 
-Step 1: Open Terminal in your VS code editor.  
+Step 1: Create a new repository on your Github account named "repo-exercise". Ensure that "Add a README file" is selected.
 
-Step 2: Type the command mkdir lab and press Enter
+Step 2: Open the Terminal and authenticate using gh (Github CLI):
+"gh auth login"
 
-Step 3: Change to the lab directory by typing cd lab and pressing Enter
+Step 3: Create an authentication token in your Github account with specified scopes given in the terminal. Copy it from Github and paste it. Verify authorization was successful.
 
-Step 4: Type the command touch file1.txt and press Enter to create a file named file1.txt
 
-Step 5: Type the command mkdir dir1 and press Enter
+Step 4: Clone the repository using its GitHub CLI.
+"gh repo clone <YOUR USERNAME>/<REPOSITORY-NAME> "
 
-Step 6: Type the command mv file1.txt dir1/ and press Enter to move file1.txt to the dir1 directory
+Step 5: Move to the repo directory by using "cd <REPOSITORY-NAME>"
 
-Step 7: Type the command touch file2.txt and press Enter to create a file named file2.txt
+Step 6: Download and add the"result.txt" to the repository folder on your local machine
 
-Step 8: Type the command mkdir -p dir2/dir3 and press Enter. We're using the -p flag to create the parent directories if they do not exist. In this case it will create the dir2 directory and then create the dir3 directory inside of dir2.
+Step 7: In the Git terminal, run the "git status" command.
 
-Step 9: Type the command mv file2.txt dir2/dir3/ and press Enter to move file2.txt to the dir3 directory
+Step 8: Verify that the output shows "result.txt" as an untracked file.
 
-Step 10: Change to the dir2 directory by typing cd dir2
+Step 9: Run the command "git add result.txt"
 
-Step 11: Type the command touch file3.txt and press Enter to create a file named file3.txt
+Step 10: Run the "git status" command again.
 
-Step 12: Type the command mv file3.txt ../ and press Enter to move file3.txt to the lab directory
+Step 11: Verify that the output shows "result.txt" as a tracked file.
 
-Step 13: Type the command cd .. and press Enter to navigate back to the lab directory
+Step 12: Next, run the "git commit" command and specify the commit message as "Successful exercise"
 
-Step 14: Type the command cd dir1 and press Enter.
+Step 13: Verify that the output shows "result.txt" with create mode
 
-Step 15: Type the command ls -l and press Enter. Note how many files and directories are in the dir1 directory.
+Step 14: Next, run the "git push" command.
 
-Step 16: Type the command cd ../dir2 and press Enter.
+Step 15: Verify that the output pushed successfully.
 
-Step 17: Type the command ls -l and press Enter. Note how many files and directories are in the dir2 directory.
+Step 16: On Github, go to your repository page.
 
-Step 18: Type the command cd dir3 and press Enter.
-
-Step 19: Type the command ls -l and press Enter. Note how many files and directories are in the dir3 directory.
+Step 17: Verify that the "result.txt" file is listed. You may need to refresh the page to see the changes. 
