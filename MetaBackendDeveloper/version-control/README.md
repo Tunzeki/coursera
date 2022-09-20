@@ -1,38 +1,55 @@
 Instructions
 
-Step 1: Create a new repository on your Github account named "repo-exercise". Ensure that "Add a README file" is selected.
+Step 1: Open the Terminal and authenticate using gh (Github CLI):
 
-Step 2: Open the Terminal and authenticate using gh (Github CLI):
 "gh auth login"
 
-Step 3: Create an authentication token in your Github account with specified scopes given in the terminal. Copy it from Github and paste it. Verify authorization was successful.
+Step 2: Create an authentication token in your Github account with specified scopes given in the terminal. Copy it from Github and paste it. Verify autherization was successful.
 
+Step 3: Visit the class repo and click the fork button.
 
-Step 4: Clone the repository using its GitHub CLI.
-"gh repo clone <YOUR USERNAME>/<REPOSITORY-NAME> "
+Step 4: Clone the repository using the GitHub CLI command.
 
-Step 5: Move to the repo directory by using "cd <REPOSITORY-NAME>"
+"gh repo clone <YOUR USERNAME>/<REPOSITORY-NAME>"
 
-Step 6: Download and add the"result.txt" to the repository folder on your local machine
+Step 5: Move to the repo directory by using "cd <REPOSITORY-NAME>"
 
-Step 7: In the Git terminal, run the "git status" command.
+Step 6: Create and checkout a new branch.
 
-Step 8: Verify that the output shows "result.txt" as an untracked file.
+"git checkout -b my-branch"
 
-Step 9: Run the command "git add result.txt"
+Step 7: Open and edit the class.MD file
 
-Step 10: Run the "git status" command again.
+Add your first name
 
-Step 11: Verify that the output shows "result.txt" as a tracked file.
+Add your location
 
-Step 12: Next, run the "git commit" command and specify the commit message as "Successful exercise"
+Add the name of the certification you are working on
 
-Step 13: Verify that the output shows "result.txt" with create mode
+Step 8: Add your changes
 
-Step 14: Next, run the "git push" command.
+"git add class.MD"
 
-Step 15: Verify that the output pushed successfully.
+Step 9: Commit your changes with a message
 
-Step 16: On Github, go to your repository page.
+"git commit"
 
-Step 17: Verify that the "result.txt" file is listed. You may need to refresh the page to see the changes. 
+Step 10: Push your changes to your fork
+
+"git push origin my-branch"
+
+Step 11: Visit the class repo and click Pull Requests.
+
+Step 12: Click on New Pull Request.
+
+Step 13: On the compare page click "compare across forks"
+
+Step 14: Select the main branch as "base"
+
+Step 15: Select your fork and the committed branch (my-branch) as "fork"
+
+Step 16: Give your pull request a title and description.
+
+Step 17: Click "Create Pull Request" button to initiate your pull request.
+
+Step 18: Once your pull request is complete copy the pull request ID.
