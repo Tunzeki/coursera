@@ -1,3 +1,3 @@
 # Coursera
 
-This repository is for all assignments done in Coursera courses I take
+This repository is for all assignments done and projects completed in the Coursera courses I take.
